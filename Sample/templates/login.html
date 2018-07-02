@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'sampleapp:login_submit' %}">
+        {% csrf_token %}
+        <label for="sample-user">Username: </label><input type="text" name="username" id="sample-user" />
+        <label for="sample-pwd">Password: </label><input type="password" name="password" id="sample-pwd" />
+        <button type="submit">Submit</button>
+    </form>
+    <form action="{% url 'sampleapp:login' %}">
+        <button type="submit">Clear</button>
+    </form>
+</body>
+</html>
